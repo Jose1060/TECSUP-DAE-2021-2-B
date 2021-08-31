@@ -1,0 +1,16 @@
+<h2>{{titulo}}</h2>
+
+<form action="{% url 'cilindro:volumen' %}" method="post">
+	{% csrf_token %} Altura:
+	<input type="text" name="h" /><br />
+	Radio:
+	<input type="text" name="r" /><br />
+	Unidades:
+	<select name="unidad">
+		<option value="m">Metros</option>
+		<option value="cm">Centimetros</option>
+		<option value="pies">Pies</option>
+		<option value="pulgadas">Pulgadas</option>
+	</select>
+	<input type="submit" name="volumen" value="Enviar" /><br />
+</form>
